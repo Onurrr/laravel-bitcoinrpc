@@ -1,7 +1,5 @@
 # Viacoin JSON-RPC Service Provider for Laravel
 
-[![Latest Stable Version](https://poser.pugx.org/onurrr/laravel-viacoinrpc/v/stable)](https://packagist.org/packages/onurrr/laravel-viacoinrpc) [![License](https://poser.pugx.org/onurrr/laravel-viacoinrpc/license)](https://packagist.org/packages/onurrr/laravel-viacoinrpc) [![Build Status](https://travis-ci.org/onurrr/laravel-viacoinrpc.svg)](https://travis-ci.org/onurrr/laravel-viacoinrpc) [![Code Climate](https://codeclimate.com/github/Onurrr/laravel-viacoinrpc/badges/gpa.svg)](https://codeclimate.com/github/Onurrr/laravel-viacoinrpc) <a href="https://codeclimate.com/github/onurrr/laravel-viacoinrpc/coverage"><img src="https://codeclimate.com/github/Onurrr/laravel-viacoinrpc/badges/coverage.svg" /></a> [![Dependency Status](https://www.versioneye.com/user/projects/58833bfce25f5900365362cf/badge.svg?style=rounded)](https://www.versioneye.com/user/projects/58833bfce25f5900365362cf)
-
 ## About
 This package allows you to make JSON-RPC calls to Viacoin Core JSON-RPC server from your laravel project.
 It's based on [php-viacoinrpc](https://github.com/onurrr/php-viacoinrpc) project - fully unit-tested Viacoin JSON-RPC client powered by GuzzleHttp.
