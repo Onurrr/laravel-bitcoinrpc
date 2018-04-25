@@ -3,77 +3,77 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Bitcoind JSON-RPC Scheme
+    | Viacoind JSON-RPC Scheme
     |--------------------------------------------------------------------------
-    | URI scheme of Bitcoin Core's JSON-RPC server.
+    | URI scheme of Viacoin Core's JSON-RPC server.
     |
     | Use https to enable SSL connections with Core,
     | but this is strongly discouraged by developers.
     |
     */
 
-    'scheme' => env('BITCOIND_SCHEME', 'http'),
+    'scheme' => env('VIACOIND_SCHEME', 'http'),
 
     /*
     |--------------------------------------------------------------------------
-    | Bitcoind JSON-RPC Host
+    | Viacoind JSON-RPC Host
     |--------------------------------------------------------------------------
     | Tells service provider which hostname or IP address
-    | Bitcoin Core is running at.
+    | Viacoin Core is running at.
     |
-    | If Bitcoin Core is running on the same PC as
+    | If Viacoin Core is running on the same PC as
     | laravel project use localhost or 127.0.0.1.
     |
-    | If you're running Bitcoin Core on the different PC,
-    | you may also need to add rpcallowip=<server-ip-here> to your bitcoin.conf
+    | If you're running Viacoin Core on the different PC,
+    | you may also need to add rpcallowip=<server-ip-here> to your viacoin.conf
     | file to allow connections from your laravel client.
     |
     */
 
-    'host' => env('BITCOIND_HOST', 'localhost'),
+    'host' => env('VIACOIND_HOST', 'localhost'),
 
     /*
     |--------------------------------------------------------------------------
-    | Bitcoind JSON-RPC Port
+    | Viacoind JSON-RPC Port
     |--------------------------------------------------------------------------
-    | The port at which Bitcoin Core is listening for JSON-RPC connections.
+    | The port at which Viacoin Core is listening for JSON-RPC connections.
     | Default is 8332 for mainnet and 18332 for testnet.
     | You can also directly specify port by adding rpcport=<port>
-    | to bitcoin.conf file.
+    | to viacoin.conf file.
     |
     */
 
-    'port' => env('BITCOIND_PORT', 8332),
+    'port' => env('VIACOIND_PORT', 8332),
 
     /*
     |--------------------------------------------------------------------------
-    | Bitcoind JSON-RPC User
+    | Viacoind JSON-RPC User
     |--------------------------------------------------------------------------
-    | Username needs to be set exactly as in bitcoin.conf file
+    | Username needs to be set exactly as in viacoin.conf file
     | rpcuser=<username>.
     |
     */
 
-    'user' => env('BITCOIND_USER', ''),
+    'user' => env('VIACOIND_USER', ''),
 
     /*
     |--------------------------------------------------------------------------
-    | Bitcoind JSON-RPC Password
+    | Viacoind JSON-RPC Password
     |--------------------------------------------------------------------------
-    | Password needs to be set exactly as in bitcoin.conf file
+    | Password needs to be set exactly as in viacoin.conf file
     | rpcpassword=<password>.
     |
     */
 
-    'password' => env('BITCOIND_PASSWORD', ''),
+    'password' => env('VIACOIND_PASSWORD', ''),
 
     /*
     |--------------------------------------------------------------------------
-    | Bitcoind JSON-RPC Server CA
+    | Viacoind JSON-RPC Server CA
     |--------------------------------------------------------------------------
-    | If you're using SSL (https) to connect to your Bitcoin Core
+    | If you're using SSL (https) to connect to your Viacoin Core
     | you can specify custom ca package to verify against.
-    | Note that using Bitcoin JSON-RPC over SSL is strongly discouraged.
+    | Note that using Viacoin JSON-RPC over SSL is strongly discouraged.
     |
     */
 

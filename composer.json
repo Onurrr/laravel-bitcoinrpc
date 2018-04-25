@@ -1,14 +1,14 @@
 {
-    "name": "denpa/laravel-bitcoinrpc",
+    "name": "onurrr/laravel-viacoinrpc",
     "type": "library",
-    "description": "Bitcoin JSON-RPC Service Provider for Laravel",
-    "keywords": ["laravel","bitcoin","api","jsonrpc","guzzle"],
-    "homepage": "https://github.com/denpamusic/laravel-bitcoinrpc",
+    "description": "Viacoin JSON-RPC Service Provider for Laravel",
+    "keywords": ["laravel","viacoin","api","jsonrpc","guzzle"],
+    "homepage": "https://github.com/onurrr/laravel-viacoinrpc",
     "license": "MIT",
     "authors": [
         {
-            "name": "Denis Paavilainen",
-            "email": "denpa@netfleet.space",
+            "name": "Onurrr",
+            "email": "mewnbot@gmail.com",
             "role": "Developer"
         }
     ],
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "Denpa\\Bitcoin\\": "src/"
+            "Onurrr\\Viacoin\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Denpa\\Bitcoin\\Providers\\ServiceProvider"
+                "Onurrr\\Viacoin\\Providers\\ServiceProvider"
             ]
         }
     }

@@ -1,12 +1,12 @@
 <?php
 
 use Orchestra\Testbench\TestCase;
-use Denpa\Bitcoin\Traits\Bitcoind;
-use Denpa\Bitcoin\Client as BitcoinClient;
+use Onurrr\Viacoin\Traits\Viacoind;
+use Onurrr\Viacoin\Client as ViacoinClient;
 
-class BitcoindTest extends TestCase
+class ViacoindTest extends TestCase
 {
-    use Bitcoind;
+    use Viacoind;
 
     /**
      * Get package providers.
@@ -18,7 +18,7 @@ class BitcoindTest extends TestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Denpa\Bitcoin\Providers\ServiceProvider::class,
+            \Onurrr\Viacoin\Providers\ServiceProvider::class,
         ];
     }
 
@@ -32,7 +32,7 @@ class BitcoindTest extends TestCase
     protected function getPackageAliases($app)
     {
         return [
-            'Bitcoind' => 'Denpa\Bitcoin\Facades\Bitcoind',
+            'Viacoind' => 'Onurrr\Viacoin\Facades\Viacoind',
         ];
     }
 
@@ -44,8 +44,8 @@ class BitcoindTest extends TestCase
      */
     protected function getEnvironmentSetUp($app)
     {
-        $app['config']->set('bitcoind.user', 'testuser');
-        $app['config']->set('bitcoind.password', 'testpass');
+        $app['config']->set('viacoind.user', 'testuser');
+        $app['config']->set('viacoind.password', 'testpass');
     }
 
     /**
@@ -55,7 +55,7 @@ class BitcoindTest extends TestCase
      */
     public function testServiceIsAvailable()
     {
-        $this->assertTrue($this->app->bound('bitcoind'));
+        $this->assertTrue($this->app->bound('viacoind'));
     }
 
     /**
@@ -65,7 +65,7 @@ class BitcoindTest extends TestCase
      */
     public function testFacade()
     {
-        $this->assertInstanceOf(BitcoinClient::class, \Bitcoind::getFacadeRoot());
+        $this->assertInstanceOf(ViacoinClient::class, \Viacoind::getFacadeRoot());
     }
 
     /**
@@ -75,7 +75,7 @@ class BitcoindTest extends TestCase
      */
     public function testHelper()
     {
-        $this->assertInstanceOf(BitcoinClient::class, bitcoind());
+        $this->assertInstanceOf(ViacoinClient::class, viacoind());
     }
 
     /**
@@ -85,34 +85,34 @@ class BitcoindTest extends TestCase
      */
     public function testTrait()
     {
-        $this->assertInstanceOf(BitcoinClient::class, $this->bitcoind());
+        $this->assertInstanceOf(ViacoinClient::class, $this->viacoind());
     }
 
     /**
-     * Test bitcoin config.
+     * Test viacoin config.
      *
      * @return void
      */
     public function testConfig()
     {
-        $config = bitcoind()->getConfig();
+        $config = viacoind()->getConfig();
 
         $this->assertEquals(
-            config('bitcoind.scheme'),
+            config('viacoind.scheme'),
             $config['base_uri']->getScheme()
         );
 
         $this->assertEquals(
-            config('bitcoind.host'),
+            config('viacoind.host'),
             $config['base_uri']->getHost()
         );
 
         $this->assertEquals(
-            config('bitcoind.port'),
+            config('viacoind.port'),
             $config['base_uri']->getPort()
         );
 
-        $this->assertEquals(config('bitcoind.user'), $config['auth'][0]);
-        $this->assertEquals(config('bitcoind.password'), $config['auth'][1]);
+        $this->assertEquals(config('viacoind.user'), $config['auth'][0]);
+        $this->assertEquals(config('viacoind.password'), $config['auth'][1]);
     }
 }

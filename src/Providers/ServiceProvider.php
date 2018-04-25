@@ -1,8 +1,8 @@
 <?php
 
-namespace Denpa\Bitcoin\Providers;
+namespace Onurrr\Viacoin\Providers;
 
-use Denpa\Bitcoin\Client as BitcoinClient;
+use Onurrr\Viacoin\Client as ViacoinClient;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
 class ServiceProvider extends IlluminateServiceProvider
@@ -16,8 +16,8 @@ class ServiceProvider extends IlluminateServiceProvider
     {
         $path = realpath(__DIR__.'/../../config/config.php');
 
-        $this->publishes([$path => config_path('bitcoind.php')], 'config');
-        $this->mergeConfigFrom($path, 'bitcoind');
+        $this->publishes([$path => config_path('viacoind.php')], 'config');
+        $this->mergeConfigFrom($path, 'viacoind');
     }
 
     /**
@@ -40,7 +40,7 @@ class ServiceProvider extends IlluminateServiceProvider
     protected function registerAliases()
     {
         $aliases = [
-            'bitcoind' => 'Denpa\Bitcoin\Client',
+            'viacoind' => 'Onurrr\Viacoin\Client',
         ];
 
         foreach ($aliases as $key => $aliases) {
@@ -57,14 +57,14 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     protected function registerClient()
     {
-        $this->app->singleton('bitcoind', function ($app) {
-            return new BitcoinClient([
-                'scheme' => $app['config']->get('bitcoind.scheme', 'http'),
-                'host'   => $app['config']->get('bitcoind.host', 'localhost'),
-                'port'   => $app['config']->get('bitcoind.port', 8332),
-                'user'   => $app['config']->get('bitcoind.user'),
-                'pass'   => $app['config']->get('bitcoind.password'),
-                'ca'     => $app['config']->get('bitcoind.ca'),
+        $this->app->singleton('viacoind', function ($app) {
+            return new ViacoinClient([
+                'scheme' => $app['config']->get('viacoind.scheme', 'http'),
+                'host'   => $app['config']->get('viacoind.host', 'localhost'),
+                'port'   => $app['config']->get('viacoind.port', 8332),
+                'user'   => $app['config']->get('viacoind.user'),
+                'pass'   => $app['config']->get('viacoind.password'),
+                'ca'     => $app['config']->get('viacoind.ca'),
             ]);
         });
     }

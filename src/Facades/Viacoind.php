@@ -1,10 +1,10 @@
 <?php
 
-namespace Denpa\Bitcoin\Facades;
+namespace Onurrr\Viacoin\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Bitcoind extends Facade
+class Viacoind extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class Bitcoind extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'bitcoind';
+        return 'viacoind';
     }
 }

@@ -1,13 +1,13 @@
 <?php
 
-if (! function_exists('bitcoind')) {
+if (! function_exists('viacoind')) {
     /**
-     * Get bitcoind client instance.
+     * Get viacoind client instance.
      *
-     * @return \Denpa\Bitcoin\Client
+     * @return \Onurrr\Viacoin\Client
      */
-    function bitcoind()
+    function viacoind()
     {
-        return app('bitcoind');
+        return app('viacoind');
     }
 }
