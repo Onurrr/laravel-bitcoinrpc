@@ -4,59 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "49d9064d354157d3767c51e0a08847e3",
+    "content-hash": "a995011a21bf34c017385d2fb4440ff0",
     "packages": [
-        {
-            "name": "denpa/php-bitcoinrpc",
-            "version": "v2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/denpamusic/php-bitcoinrpc.git",
-                "reference": "eebd520b063a386b334a4004201388ba4fc600fc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/denpamusic/php-bitcoinrpc/zipball/eebd520b063a386b334a4004201388ba4fc600fc",
-                "reference": "eebd520b063a386b334a4004201388ba4fc600fc",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.2",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "6.3.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Denpa\\Bitcoin\\": "src"
-                },
-                "classmap": [
-                    "tests"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Denis Paavilainen",
-                    "email": "denpa@netfleet.space",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Bitcoin JSON-RPC client based on GuzzleHttp",
-            "homepage": "https://github.com/denpamusic/php-bitcoinrpc",
-            "keywords": [
-                "Guzzle",
-                "api",
-                "bitcoin",
-                "jsonrpc"
-            ],
-            "time": "2018-04-06T17:14:54+00:00"
-        },
         {
             "name": "doctrine/inflector",
             "version": "v1.2.0",
@@ -854,6 +803,57 @@
                 "time"
             ],
             "time": "2018-03-19T15:50:49+00:00"
+        },
+        {
+            "name": "onurrr/php-viacoinrpc",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Onurrr/php-viacoinrpc.git",
+                "reference": "eebd520b063a386b334a4004201388ba4fc600fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Onurrr/php-viacoinrpc/zipball/eebd520b063a386b334a4004201388ba4fc600fc",
+                "reference": "eebd520b063a386b334a4004201388ba4fc600fc",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "6.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Denpa\\Bitcoin\\": "src"
+                },
+                "classmap": [
+                    "tests"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Denis Paavilainen",
+                    "email": "denpa@netfleet.space",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Bitcoin JSON-RPC client based on GuzzleHttp",
+            "homepage": "https://github.com/denpamusic/php-bitcoinrpc",
+            "keywords": [
+                "Guzzle",
+                "api",
+                "bitcoin",
+                "jsonrpc"
+            ],
+            "time": "2018-04-06T17:14:54+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2145,6 +2145,57 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "denpa/php-bitcoinrpc",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denpamusic/php-bitcoinrpc.git",
+                "reference": "eebd520b063a386b334a4004201388ba4fc600fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denpamusic/php-bitcoinrpc/zipball/eebd520b063a386b334a4004201388ba4fc600fc",
+                "reference": "eebd520b063a386b334a4004201388ba4fc600fc",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "6.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Denpa\\Bitcoin\\": "src"
+                },
+                "classmap": [
+                    "tests"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Denis Paavilainen",
+                    "email": "denpa@netfleet.space",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Bitcoin JSON-RPC client based on GuzzleHttp",
+            "homepage": "https://github.com/denpamusic/php-bitcoinrpc",
+            "keywords": [
+                "Guzzle",
+                "api",
+                "bitcoin",
+                "jsonrpc"
+            ],
+            "time": "2018-04-06T17:14:54+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
