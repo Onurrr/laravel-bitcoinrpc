@@ -60,7 +60,7 @@ class ViacoinController extends Controller
    */
    public function blockInfo()
    {
-      $blockHash = '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f';
+      $blockHash = 'dd5076b0d5da723580f906a8711b757b953f97dcaf6a8422420fea92f47dbfee';
       $blockInfo = viacoind()->getBlock($blockHash);
       return response()->json($blockInfo->get());
    }
@@ -84,7 +84,7 @@ class ViacoinController extends Controller
    */
    public function blockInfo()
    {
-      $blockHash = '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f';
+      $blockHash = 'dd5076b0d5da723580f906a8711b757b953f97dcaf6a8422420fea92f47dbfee';
       $blockInfo = Viacoind::getBlock($blockHash);
       return response()->json($blockInfo->get());
    }
@@ -109,7 +109,7 @@ class ViacoinController extends Controller
    */
    public function blockInfo(ViacoinClient $viacoind)
    {
-      $blockHash = '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f';
+      $blockHash = 'dd5076b0d5da723580f906a8711b757b953f97dcaf6a8422420fea92f47dbfee';
       $blockInfo = $viacoind->getBlock($blockHash);
       return response()->json($blockInfo->get());
    }
